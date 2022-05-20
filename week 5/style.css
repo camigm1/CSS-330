@@ -1,0 +1,38 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eeefda;
+}
+
+h1 {
+  width: 100%;
+  background-color: #152a3e;
+  color: rgb(212, 211, 211);
+  text-align: center;
+  margin: 0;
+  font-size: 5rem;
+  padding: 5%;
+}
+
+h2 {
+  background-color: #cac691;
+  text-decoration: none;
+  text-align: center;
+  font-size: 3rem;
+  padding: 3%;
+  color: rgb(61, 59, 59);
+}
+
+ul {
+  padding-left: 0;
+}
+
+img {
+  width: 40%;
+}
+
+/* https://replit.com/@Ipulotu/WDD330-group3#index.html */
+
+/* https://replit.com/@Ipulotu/WDD330-group3#index.html */
