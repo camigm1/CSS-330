@@ -1,0 +1,47 @@
+body {
+  box-sizing: border-box;
+}
+
+/* Header */
+h1 {
+  font-family: "Roboto Slab";
+  text-align: center;
+  background-color: rgb(49, 49, 102);
+  color: rgb(180, 177, 177);
+  margin-top: 0;
+  border-radius: 10px 10px 0 0;
+  padding: 25px;
+}
+
+main {
+  font-family: sans-serif;
+  margin: 0 auto;
+  background-color: rgb(211, 169, 115);
+  color: rgb(49, 46, 46);
+  margin-top: 0;
+  padding-bottom: 20px;
+  width: 50%;
+  border-radius: 10px;
+}
+
+ul {
+  width: 70%;
+  background-color: white;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+a {
+  background-color: rgb(253, 63, 5);
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  color: white;
+  border: 0.5px solid rgb(49, 46, 46);
+}
+
+.input-container {
+  padding: 30px;
+  width: 70%;
+  margin: 0 auto;
+}
