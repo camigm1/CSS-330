@@ -1,18 +1,26 @@
 let todoItem = document.querySelector("#input-todo");
 const button = document.querySelector("#btn");
-const ul = document.querySelector("ul");
 const btnAll = document.querySelector("#btn-all");
 const btnActive = document.querySelector("#btn-active");
 const btnComplete = document.querySelector("#btn-complete");
+const ul = document.querySelector("ul");
 
 button.addEventListener("click", addToDo);
 
 function addToDo() {
-  let item = document.createElement("li");
-  item.textContent = todoItem.value;
+  let checkbox = document.createElement("input");
+  let listItem = document.createElement("li");
+  let deleteBtn = document.createElement("a");
+  checkbox.textContent = todoItem.value;
+  listItem.textContent = todoItem.value;
+  deleteBtn.textContent = "X";
+  checkbox.type = "checkbox";
   console.log(todoItem.value);
-  item.style.color = "black";
-  ul.append(item);
+  // checkboxDiv.append(checkbox);
+  // listItem.append(checkbox);
+  ul.append(listItem);
+  listItem.append(deleteBtn);
+  listItem.append(checkbox);
   clearItem();
 }
 

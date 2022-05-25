@@ -47,11 +47,19 @@ a {
   border-radius: 10px;
   text-decoration: none;
   color: white;
-  border: 0.5px solid rgb(49, 46, 46);
 }
 
+ul li a {
+  background-color: rgb(124, 41, 30);
+  padding: 5px;
+  border-radius: none;
+}
 .input-container {
   padding: 30px;
   width: 70%;
   margin: 0 auto;
+}
+
+li {
+  margin: 20px;
 }
