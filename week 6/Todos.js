@@ -1,5 +1,7 @@
-import "utilities.js";
+import { addToDo } from "./utilities.js";
 
-class Todos {}
-
-export default Todos;
+export default class Todos {
+  constructor() {
+    this.todoList = null;
+  }
+}

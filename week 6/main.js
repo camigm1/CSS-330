@@ -1,3 +1,3 @@
-import "Todos.js";
+import Todos from "./Todos.js";
 
 const todo = new Todos();

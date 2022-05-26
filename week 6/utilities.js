@@ -1,4 +1,12 @@
-let todoItem = document.querySelector("#input-todo");
+export function onTouch(elementSelector, callback) {
+  elementSelector.addEventListener("touchend", callback);
+}
+
+export function qs(selector, parent = document) {
+  return parent.querySelector(selector);
+}
+
+let todoItem = qs("#input-todo");
 const button = document.querySelector("#btn");
 const btnAll = document.querySelector("#btn-all");
 const btnActive = document.querySelector("#btn-active");
@@ -10,8 +18,9 @@ window.deleteBtn = document.createElement("a");
 window.deleteBtn.setAttribute("class", "delete-btn");
 
 button.addEventListener("click", addToDo);
+onTouch(button, addToDo);
 
-function addToDo() {
+export function addToDo() {
   let checkbox = document.createElement("input");
   window.listItem = document.createElement("li");
   window.deleteBtn = document.createElement("a");
@@ -29,7 +38,6 @@ function addToDo() {
   window.listItem.append(checkbox);
   clearItem();
   document.querySelector(".delete-btn").addEventListener("click", deleteItem);
-  window.localStorage.setItem("item", todoItem.value);
 }
 
 function clearItem() {
