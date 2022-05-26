@@ -29,6 +29,7 @@ ul {
   background-color: white;
   margin: 0 auto;
   border-radius: 10px;
+  padding: 30px;
 }
 
 .btns-container {
@@ -44,16 +45,21 @@ ul {
 a {
   background-color: rgb(253, 63, 5);
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
   text-decoration: none;
   color: white;
 }
 
 ul li a {
   background-color: rgb(124, 41, 30);
-  padding: 5px;
+  margin-left: 20px;
   border-radius: none;
 }
+
+ul li {
+  padding: 5px;
+}
+
 .input-container {
   padding: 30px;
   width: 70%;
@@ -62,4 +68,8 @@ ul li a {
 
 li {
   margin: 20px;
+}
+
+.deleteItem {
+  display: none;
 }

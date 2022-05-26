@@ -1,0 +1,41 @@
+let todoItem = document.querySelector("#input-todo");
+const button = document.querySelector("#btn");
+const btnAll = document.querySelector("#btn-all");
+const btnActive = document.querySelector("#btn-active");
+const btnComplete = document.querySelector("#btn-complete");
+const ul = document.querySelector("ul");
+let itemsArray = [];
+let indexKey = 0;
+
+button.addEventListener("click", addToDo);
+
+
+function addToDo() {
+  itemsArray.push(todoItem.value);
+  itemsArray.forEach(item => {
+    const newItem = 
+    `<li class="list-item">${item}<input type="checkbox"><a class = "delete-btn" onclick = "deleteItem(indexKey)">X</a></li>`
+  }
+     ); 
+  ;
+
+  window.localStorage.setItem(indexKey, todoItem.value); 
+  indexKey++;
+  clearItem();
+  console.log(indexKey)
+}
+
+function clearItem() {
+  todoItem.value = "";
+}
+
+// document.querySelector(".delete-btn").addEventListener("click", deleteItem);
+
+function deleteItem(indexKey) {
+  document.querySelector(".list-item").style.display = "none";
+  console.log(indexKey)
+  window.localStorage.removeItem(indexKey-1);
+  console.log("delelt woks")
+}
+
+// window.localStorage.setItem('item', todoItem.value)
