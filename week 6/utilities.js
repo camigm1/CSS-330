@@ -1,3 +1,5 @@
+import { saveTodo } from "./Todos.js";
+
 export function onTouch(elementSelector, callback) {
   elementSelector.addEventListener("touchend", callback);
 }
@@ -17,38 +19,40 @@ window.listItem = document.createElement("li");
 window.deleteBtn = document.createElement("a");
 window.deleteBtn.setAttribute("class", "delete-btn");
 
-button.addEventListener("click", addToDo);
-onTouch(button, addToDo);
+// button.addEventListener("click", addToDo);
+// onTouch(button, addToDo);
 
-export function addToDo() {
-  let checkbox = document.createElement("input");
-  window.listItem = document.createElement("li");
-  window.deleteBtn = document.createElement("a");
-  checkbox.textContent = todoItem.value;
-  window.listItem.textContent = todoItem.value;
-  window.deleteBtn.textContent = "X";
+// export function addToDo() {
+//   let todoItem = qs("#input-todo").value;
+//   saveTodo(todoItem, "todo");
+// let checkbox = document.createElement("input");
+// window.listItem = document.createElement("li");
+// window.deleteBtn = document.createElement("a");
+// checkbox.textContent = todoItem.value;
+// window.listItem.textContent = todoItem.value;
+// window.deleteBtn.textContent = "X";
 
-  window.deleteBtn.setAttribute("class", "delete-btn");
-  checkbox.type = "checkbox";
-  console.log(deleteBtn);
-  // checkboxDiv.append(checkbox);
-  // listItem.append(checkbox);
-  ul.append(window.listItem);
-  window.listItem.append(deleteBtn);
-  window.listItem.append(checkbox);
-  clearItem();
-  document.querySelector(".delete-btn").addEventListener("click", deleteItem);
-}
+// window.deleteBtn.setAttribute("class", "delete-btn");
+// checkbox.type = "checkbox";
+// console.log(deleteBtn);
+// // checkboxDiv.append(checkbox);
+// // listItem.append(checkbox);
+// ul.append(window.listItem);
+// window.listItem.append(deleteBtn);
+// window.listItem.append(checkbox);
+// clearItem();
+// document.querySelector(".delete-btn").addEventListener("click", deleteItem);
+// }
 
-function clearItem() {
-  todoItem.value = "";
-}
+// function clearItem() {
+//   todoItem.value = "";
+// }
 
 // document.querySelector(".delete-btn").addEventListener("click", deleteItem);
 
-function deleteItem() {
-  window.listItem.classList.add("deleteItem");
-  console.log();
-}
+// function deleteItem() {
+//   window.listItem.classList.add("deleteItem");
+//   console.log();
+// }
 
 // window.localStorage.setItem('item', todoItem.value)
