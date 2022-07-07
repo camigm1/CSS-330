@@ -1,0 +1,17 @@
+/*colors: 0b3866, 95f9c3
+*/
+body {
+  box-sizing: border-box;
+  font-family: "Harmattan", sans-serif;
+}
+
+header h1 {
+  background-color: #0b3866;
+  color: #fff;
+  padding: 20px;
+  font-family: "Press Start 2P", cursive;
+}
+
+main {
+  background-color: #95f9c3;
+}
