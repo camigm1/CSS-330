@@ -5,13 +5,32 @@ body {
   font-family: "Harmattan", sans-serif;
 }
 
-header h1 {
+header {
+  background-image: url(images/atari.jpg);
+  min-height: 70vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  flex-direction: column;
+  text-align: center;
+  margin-bottom: 0px;
+  opacity: 0.8;
+  filter: brightness(60%);
+}
+
+.header-one {
   background-color: #0b3866;
   color: #fff;
   padding: 20px;
   font-family: "Press Start 2P", cursive;
+  opacity: none;
+  filter: none;
 }
 
 main {
-  background-color: #95f9c3;
+  /* background-color: #95f9c3; */
 }

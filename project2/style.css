@@ -1,0 +1,43 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+}
+
+/*Colors
+
+darker: #103783,
+lighter: #9bafd9, */
+
+header {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+
+  color: #fff;
+  padding: 30px;
+  background-image: url("/project2/stars.jpg");
+}
+
+main {
+  border: 2px solid #103783;
+  padding: 30px;
+  background-color: #ced8ee;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.search-section {
+  display: flex;
+  padding-bottom: 30px;
+}
+
+div {
+  width: 50%;
+}
+
+.stored-faves {
+  border-top: 1px solid #103783;
+}
