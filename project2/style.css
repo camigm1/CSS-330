@@ -15,18 +15,22 @@ header {
   width: 80%;
   margin: 0 auto;
   text-align: center;
-
+  font-family: "Roboto Mono", monospace;
   color: #fff;
   padding: 30px;
   background-image: url("/project2/stars.jpg");
+  border-radius: 10px 10px 0 0;
 }
 
 main {
+  font-family: "Lato", sans-serif;
   border: 2px solid #103783;
   padding: 30px;
   background-color: #ced8ee;
   width: 80%;
   margin: 0 auto;
+  border-radius: 0 0 10px 10px;
+  color: rgb(63, 60, 60);
 }
 
 .search-section {
