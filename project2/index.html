@@ -19,13 +19,23 @@
   <body>
     <header><h1>NASA Image Tracker</h1></header>
     <main>
+      <p>Welcome to our NASA Image Tracker. you want to see</p>
       <section class="search-section">
-        <div><input type="text" /> <button>Search</button></div>
+        <div class="input-section">
+          <input type="date" value="" /> <button>Search</button>
+          <p class="img-description"></p>
+        </div>
 
-        <div>Displays the image</div>
+        <div class="display-image">
+          <h2>Picture of the Day</h2>
+          <img class="display-img" src="" alt="NASA Picture" />
+          <p class="img-title"></p>
+        </div>
       </section>
+      <p><a class="favorites-btn" href="">Save to Favorites</a></p>
       <section class="stored-faves">
-        <h2>This is where the faves will be stores</h2>
+        <h2>Favorites</h2>
+        <ul class="favorite-content"></ul>
       </section>
     </main>
   </body>

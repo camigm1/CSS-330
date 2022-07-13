@@ -11,11 +11,15 @@ body {
 darker: #103783,
 lighter: #9bafd9, */
 
+h1,
+h2 {
+  font-family: "Roboto Mono", monospace;
+}
+
 header {
   width: 80%;
   margin: 0 auto;
   text-align: center;
-  font-family: "Roboto Mono", monospace;
   color: #fff;
   padding: 30px;
   background-image: url("/project2/stars.jpg");
@@ -35,11 +39,43 @@ main {
 
 .search-section {
   display: flex;
-  padding-bottom: 30px;
 }
 
+.input-section {
+  padding-top: 50px;
+}
+
+.favorites-btn {
+  display: block;
+
+  background-color: #457b9d;
+  width: 50%;
+  margin: 0 auto 15px;
+  padding: 1.5%;
+  border-radius: 5px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.favorites-btn:hover {
+  background-color: #1d3557;
+  color: #fff;
+}
+
+/* .favorites-btn a:hover {
+  color: #fff;
+} */
 div {
   width: 50%;
+}
+
+.img-description {
+  padding-top: 20px;
+  font-size: 0.75rem;
+}
+
+.display-img {
+  width: 80%;
 }
 
 .stored-faves {
