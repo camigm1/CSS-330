@@ -1,5 +1,3 @@
-
-
 export function writeToLS(key, data) {
   // const values = readFromLS(key);
   localStorage.setItem(key, data);

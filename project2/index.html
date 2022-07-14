@@ -13,7 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap"
       rel="stylesheet"
     />
-    <script defer src="main.js"></script>
+    <script defer src="main.js" type="module"></script>
     <title>NASA Image tracker</title>
   </head>
   <body>
@@ -32,7 +32,9 @@
           <p class="img-title"></p>
         </div>
       </section>
-      <p><a class="favorites-btn" href="">Save to Favorites</a></p>
+      <p>
+        <a class="favorites-btn">Save to Favorites</a>
+      </p>
       <section class="stored-faves">
         <h2>Favorites</h2>
         <ul class="favorite-content"></ul>
