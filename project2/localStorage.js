@@ -6,3 +6,7 @@ export function writeToLS(key, data) {
 export function readFromLS(key) {
   return JSON.parse(localStorage.getItem(key));
 }
+
+export function removeFromLS(key) {
+  return localStorage.removeItem(key);
+}

@@ -60,6 +60,7 @@ main {
 .favorites-btn:hover {
   background-color: #1d3557;
   color: #fff;
+  cursor: pointer;
 }
 
 /* .favorites-btn a:hover {
@@ -67,6 +68,12 @@ main {
 } */
 div {
   width: 50%;
+}
+
+.favorite-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex-wrap: wrap;
 }
 
 .img-description {
@@ -80,4 +87,8 @@ div {
 
 .stored-faves {
   border-top: 1px solid #103783;
+}
+
+.hide {
+  display: none;
 }

@@ -1,12 +1,11 @@
-// import { writeToLS } from "./localStorage";
-
-import { readFromLS, writeToLS } from "./localStorage.js";
+import { readFromLS, removeFromLS, writeToLS } from "./localStorage.js";
 
 const displayImg = document.querySelector(".display-img");
 const description = document.querySelector(".img-description");
 const titleImg = document.querySelector(".img-title");
 const favorites = document.querySelector(".favorites-btn");
 const favoriteDisplay = document.querySelector(".favorite-content");
+const hide = document.querySelector(".hide");
 
 document.querySelector("button").addEventListener("click", function () {
   getData();
@@ -39,24 +38,64 @@ const displayContent = function (data) {
 
 function addToFavorite() {
   let existing = readFromLS("favs");
-  let newFavorite = {
-    title: titleImg.innerText,
-    image: displayImg.src,
-  };
-  existing.push(newFavorite);
 
-  console.log(existing);
-  writeToLS("favs", JSON.stringify(existing));
-  createCard(existing[existing.length - 1]);
+  if (existing == null) {
+    const newArray = [];
+    let newFavorite = {
+      title: titleImg.innerText,
+      image: displayImg.src,
+    };
+    newArray.push(newFavorite);
+    writeToLS("favs", JSON.stringify(newArray));
+  } else {
+    let newFavorite = {
+      title: titleImg.innerText,
+      image: displayImg.src,
+    };
+    existing.push(newFavorite);
+
+    writeToLS("favs", JSON.stringify(existing));
+    createCard(existing[existing.length - 1]);
+  }
 }
 
 function createCard(item) {
   const title = item.title;
   const savedImg = item.image;
   let img = document.createElement("img");
+  let imgDiv = document.createElement("div");
+  let titleImg = document.createElement("p");
+  let pButton = document.createElement("p");
+  let aButton = document.createElement("a");
+  aButton.style.backgroundColor = "#457b9d";
+  aButton.style.color = "#fff";
+  aButton.style.padding = "2%";
+  aButton.innerText = "Remove";
+  aButton.style.borderRadius = "5px";
+  aButton.addEventListener("click", function (e) {
+    let existing2 = readFromLS("favs");
+    let remove = e.target.parentNode.parentNode.children[1].innerText;
+    let pos = existing2
+      .map(function (e) {
+        return e.title;
+      })
+      .indexOf(remove);
+    let deleteFromArray = deleteFavorites(existing2, pos);
+    imgDiv.style.display = "none";
+    writeToLS("favs", JSON.stringify(deleteFromArray));
+  });
+  titleImg.innerText = title;
+  imgDiv.style.display = "block";
+  imgDiv.style.width = "100%";
+  imgDiv.style.marginRight = "0";
   img.src = savedImg;
-  img.style.width = "50px";
-  favoriteDisplay.append(img);
+  img.style.width = "60%";
+  img.style.padding = "3%";
+  pButton.append(aButton);
+  imgDiv.append(img);
+  imgDiv.append(titleImg);
+  imgDiv.append(pButton);
+  favoriteDisplay.append(imgDiv);
 }
 
 function displayFavorites() {
@@ -64,13 +103,24 @@ function displayFavorites() {
   for (let index = 0; index < favsArray.length; index++) {
     createCard(favsArray[index]);
   }
-  // let li = document.createElement("li");
-
-  // li.innerHTML = savedTitle;
-  // .innerHTML += savedImg;
-  // favoriteDisplay.append(li);
 }
 
 displayFavorites();
 
-const deleteFavorites = function () {};
+function deleteFavorites(arr, index) {
+  console.log(index);
+  arr.splice(index, 1);
+
+  return arr;
+}
+
+deleteFavorites();
+// function arrayMap() {
+//   let pick = target.value;
+//   // let pos = array
+//   //   .map(function (e) {
+//   //     return e.title;
+//   //   })
+//   //   .indexOf(titleImg.innerText);
+//   // console.log("Index of 'value2'  is = " + pos);
+//   console.log(pick);
