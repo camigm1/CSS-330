@@ -13,7 +13,7 @@ lighter: #9bafd9, */
 
 h1,
 h2 {
-  font-family: "Roboto Mono", monospace;
+  font-family: "Roboto Slab", serif;
 }
 
 header {
@@ -63,6 +63,16 @@ main {
   cursor: pointer;
 }
 
+.mouseEnter {
+  background-color: #1d3557;
+  color: #fff;
+}
+
+.mouseLeave {
+  background-color: #457b9d;
+  color: #fff;
+}
+
 /* .favorites-btn a:hover {
   color: #fff;
 } */
@@ -89,6 +99,6 @@ div {
   border-top: 1px solid #103783;
 }
 
-.hide {
-  display: none;
+.image-description {
+  font-weight: 700;
 }

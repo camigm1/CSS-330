@@ -12,10 +12,6 @@ document.querySelector("button").addEventListener("click", function () {
 });
 
 favorites.addEventListener("click", addToFavorite);
-// favorites.addEventListener("click", function () {
-// const dataObject = {};
-//   writeToLS("favorites", data);
-// });
 
 const getData = async function () {
   const inputData = document.querySelector("input").value;
@@ -67,6 +63,15 @@ function createCard(item) {
   let titleImg = document.createElement("p");
   let pButton = document.createElement("p");
   let aButton = document.createElement("a");
+  aButton.addEventListener("mouseenter", function () {
+    aButton.style.backgroundColor = "#1d3557";
+    aButton.style.color = "#fff";
+  });
+  aButton.addEventListener("mouseleave", function () {
+    aButton.style.backgroundColor = "#457b9d";
+    aButton.style.color = "#fff";
+  });
+  aButton.style.cursor = "pointer";
   aButton.style.backgroundColor = "#457b9d";
   aButton.style.color = "#fff";
   aButton.style.padding = "2%";
@@ -84,7 +89,8 @@ function createCard(item) {
     imgDiv.style.display = "none";
     writeToLS("favs", JSON.stringify(deleteFromArray));
   });
-  titleImg.innerText = title;
+  titleImg.innerHTML = `<span>Image Description</span>:  ${title}`;
+
   imgDiv.style.display = "block";
   imgDiv.style.width = "100%";
   imgDiv.style.marginRight = "0";
@@ -115,12 +121,3 @@ function deleteFavorites(arr, index) {
 }
 
 deleteFavorites();
-// function arrayMap() {
-//   let pick = target.value;
-//   // let pos = array
-//   //   .map(function (e) {
-//   //     return e.title;
-//   //   })
-//   //   .indexOf(titleImg.innerText);
-//   // console.log("Index of 'value2'  is = " + pos);
-//   console.log(pick);
