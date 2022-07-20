@@ -89,7 +89,7 @@ function createCard(item) {
     imgDiv.style.display = "none";
     writeToLS("favs", JSON.stringify(deleteFromArray));
   });
-  titleImg.innerHTML = `<span>Image Description</span>:  ${title}`;
+  titleImg.innerHTML = title;
 
   imgDiv.style.display = "block";
   imgDiv.style.width = "100%";
