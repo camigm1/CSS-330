@@ -5,7 +5,6 @@ const description = document.querySelector(".img-description");
 const titleImg = document.querySelector(".img-title");
 const favorites = document.querySelector(".favorites-btn");
 const favoriteDisplay = document.querySelector(".favorite-content");
-const hide = document.querySelector(".hide");
 
 document.querySelector("button").addEventListener("click", function () {
   getData();
@@ -27,7 +26,7 @@ getData();
 
 const displayContent = function (data) {
   displayImg.src = data.hdurl;
-
+  console.log(data.date);
   description.innerText = `Image Description: ${data.explanation}`;
   titleImg.innerText = data.title;
 };
@@ -58,6 +57,8 @@ function addToFavorite() {
 function createCard(item) {
   const title = item.title;
   const savedImg = item.image;
+  const itemDate = item.date;
+
   let img = document.createElement("img");
   let imgDiv = document.createElement("div");
   let titleImg = document.createElement("p");
