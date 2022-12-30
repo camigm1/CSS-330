@@ -4,6 +4,7 @@
 
 body {
   text-align: center;
+  font-size: 1.5rem;
 }
 
 /*Colors
@@ -22,7 +23,7 @@ header {
   text-align: center;
   color: #fff;
   padding: 30px;
-  background-image: url("/project2/stars.jpg");
+  background-image: url("/stars.jpg");
   border-radius: 10px 10px 0 0;
 }
 
@@ -88,7 +89,7 @@ div {
 
 .img-description {
   padding-top: 20px;
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 
 .display-img {
